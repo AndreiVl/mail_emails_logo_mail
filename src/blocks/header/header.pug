@@ -1,0 +1,25 @@
+<!-- HEADER STARTS -->
++IE({width: table_width ,aling: 'center', valing: 'top'})
+div(style="display: inline-block; width: 100%; max-width: " + table_width + "px; vertical-align: top;")
+	<!-- ID:BG SECTION-1 -->
+	table(align="center" bgcolor=bg_table border="0" class="display-width" cellpadding="0" cellspacing="0" width="100%" style="max-width: " + table_width + "px;")
+		tr
+			td(align="center" style="padding-left: " + body_pading_l + "; padding-right: " + body_pading_r + ";")
+				+IE({width: body_width ,aling: 'center', valing: 'top'})
+				div(style="display: inline-block; width: 100%; max-width: " + body_width + "px; vertical-align: top;")
+					table(align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: " + body_width + "px;")
+						tr
+							+td-margin({height: '11'})
+						tr
+							td.smal-text.smal-text--sm(align="center")
+								a.link(href="#" target="_blank") Web version
+						tr
+							+td-margin({height: '19'})
+						tr
+							td(align="center")
+								+img({img: 'img-logo-192-50.png', alt: 'Logo', width: '192' , height: '50'})
+						tr
+							+td-margin({height: '31'})
+				|!{IE_TABLE_END}
+|!{IE_TABLE_END}
+<!-- HEADER ENDS -->

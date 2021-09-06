@@ -1,0 +1,51 @@
+mixin card(data)
+	<!-- CARD STARTS -->
+	+IE({width: table_width ,aling: 'center', valing: 'top'})
+	div(style="display: inline-block; width: 100%; max-width: " + table_width + "px; vertical-align: top;")
+		<!-- ID:BG SECTION-1 -->
+		table(align="center" bgcolor="#5aaefb" border="0" class="display-width" cellpadding="0" cellspacing="0" width="100%" style="max-width: " + table_width + "px;")
+			tr
+				td(aling="center" valing="top")
+					img(src=image_path+data.img alt=data.alt width=data.width height=data.height style="display: block; width: 100%; max-width: " + data.width + "px; height: auto; margin: 0; border: 0; padding: 0; outline: none;")
+		<!-- ID:BG SECTION-2 -->
+		table(align="center" bgcolor="#ffffff" border="0" class="display-width" cellpadding="0" cellspacing="0" width="100%" style="max-width: " + table_width + "px;")
+			tr
+				td(align="center" style="padding-left: " + body_pading_l + "px; padding-right: " + body_pading_r + "px;")
+					+IE({width: body_width ,aling: 'center', valing: 'top'})
+					div(style="display: inline-block; width: 100%; max-width: " + body_width + "px; vertical-align: top;")
+						table(align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: " + body_width + "px;")
+							tr
+								+td-margin({height: '32'})
+							tr
+								td.h1(aling="left")!=data.title
+							tr
+								+td-margin({height: '12'})
+							tr
+								td.text(aling="left")!=data.text
+							tr
+								+td-margin({height: '43'})
+							tr
+								td(aling="left")
+									+btn({link: data.url, img: 'btn-link-144-40.jpg', width: '144', height: '40'})
+							tr
+								+td-margin({height: '30'})
+					|!{IE_TABLE_END}
+		<!-- ID:BG SECTION-2 -->
+		table(align="center" bgcolor="#5aaefb" border="0" class="display-width" cellpadding="0" cellspacing="0" width="100%" style="max-width: " + table_width + "px;")
+			tr
+				td(align="center" style="padding-left: " + nul_pading_l + "; padding-right: " + nul_pading_r + ";")
+					+IE({width: body_width_1 ,aling: 'center', valing: 'top'})
+					div(style="display: inline-block; width: 100%; max-width: " + body_width + "px; vertical-align: top;")
+						table(align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: " + body_width + "px;")
+							tr
+								td(aling="center")
+									table.table-max-width(align="center" border="0" cellpadding="0" cellspacing="0" width="100%")
+										tr
+											td(aling="center" valing="middle" width="500" style="color:#9bcbc7;")
+												img(src=image_path+"img-bg-shadow-500-72.png" alt="shadow" width="500" height="72" style="display: block; width: 100%; max-width: 500px; height: auto; margin: 0; border: 0; padding: 0; outline: none;")
+					|!{IE_TABLE_END}
+	|!{IE_TABLE_END}
+	<!-- CARD ENDS -->
+
+	//- вызов 
+	//- +card({img: '', alt: '', width: '', height: '', title: '', text: '', url: ''})
